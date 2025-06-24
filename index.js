@@ -6,7 +6,6 @@ const upload = multer({ storage: storage });
 
 
 app.use(express.static('./public'));
-app.use(express.urlencoded({extended:false}));
 
 app.get('/',(req,res)=>{
     res.sendFile('./public/index.html');
