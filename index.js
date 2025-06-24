@@ -20,7 +20,6 @@ app.use(
 );
 
 app.post("/api/fileanalyse", upload.single("upfile"), (req, res) => {
-  console.log(req.file);
   if (!req.file) {
     return res.status(400).json({
       error: "file field is required",
